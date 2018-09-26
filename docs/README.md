@@ -1177,4 +1177,18 @@ sql.query
 
 ## Condition operators
 
-TODO: write this section
+You can specify modifier operator.
+Available operators: `$in`, `$gt`, `$lt`, `$gte`, `$lte`, `$eq`.
+
+```
+var jsonSql = require('json-sql')();
+  
+var sql = jsonSql.build({
+        type: 'select',
+        table: 'users',
+        fields: ['name', 'age'],
+        condition: {name: 'Max', id: 6, age: {$in:[1, 2, 3]}, score: {$gt: 10}}
+});
+
+console.log(sql.query)
+```
