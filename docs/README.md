@@ -1180,7 +1180,7 @@ sql.query
 You can specify modifier operator.
 Available operators: `$in`, `$gt`, `$lt`, `$gte`, `$lte`, `$eq`.
 
-```
+``` js
 var jsonSql = require('json-sql')();
   
 var sql = jsonSql.build({
